@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <title>Student Sign Up & Login</title>
     <link rel="stylesheet" href="style.css">
-    </link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 </head>
 
@@ -28,16 +30,19 @@
         </div>
     </div>
 
+    <button class="capsule">
+        Student Portal
+    </button>
 
     <div class="container">
         <div id="loginForm">
             <h2>Student Login</h2>
             <form>
                 <label for="login-email">Enrollment Number</label>
-                <input type="text" id="enrollment-number" name="login-email" required>
+                <input type="text" id="enrollment-number" name="login-email" placeholder="Enter your enrollment number" required>
 
                 <label for="login-password">Password</label>
-                <input type="password" id="login-password" name="login-password" required>
+                <input type="password" id="login-password" name="login-password" placeholder="Enter your passsword">
 
                 <button type="submit">Login</button>
             </form>

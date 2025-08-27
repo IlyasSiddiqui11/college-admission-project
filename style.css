@@ -1,19 +1,19 @@
         body {
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            display: flex;
+            font-family: 'bitter',Arial, sans-serif;
+            /* background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(194, 247, 252)); */
+            background-color: #F5F6F8;
+            /* display: flex; */
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
         .bar{
             background-size: 100%;
-                /* CHANGE HERE FOR BACKGROUND COLOUR OF bar */
+            background-color: #EEF0F4;
             display: flex;
             height: 9rem;
             width: 100vw;
             position: fixed;
-            margin-top: 2vh;
             top: 0;
             left: 0;
             z-index: 10;
@@ -22,16 +22,17 @@
             margin-left: 1vh;
         }
         .college-header {
+            margin-top: 2vh;
             margin-left: 19vw;
             height: 1.5;
-            color: #4C5155;
+            color: #000000;
             text-align: center;
     }
 
     .college-header .small-text {
-    font-size: 14px;
+    font-size: 15px;
     font-style: italic;
-    color: #4C5155;
+    color: #1173D4;
     }
 
     .college-header h1 {
@@ -45,24 +46,43 @@
     .college-header .approval {
     font-size: 14px;
     font-weight: bold;
-    color: #3CBBD5;
+    color: #8D8AA3;
     }
 
     .college-header .naac {
     font-size: 13px;
     margin-top: 5px;
+    color: #8D8AA3;
     }
 
+.capsule {
+    display: block;
+    margin: 10rem auto 2rem auto; /* 10rem pushes below bar, 2rem gap above container */
+    font-weight: 550;
+    color: #1173D4;
+    border: none;
+    background-color: #C2E1F6;
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    text-align: center;
+    max-width: 90vw;
+}
+.capsule:hover{
+    background-color: #9bd6fd;
+}
 
         .container {
-            border: 2px solid #ccc;
-            background: #fff;
-            padding: 2rem 3rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgb(235, 233, 231);
-            width: 45vh;
-            margin-top: 2rem;
+                background: #FFFFFF;
+                padding: 2rem 3rem;
+                border-radius: 8px;
+                box-shadow: 0 1px 10px rgb(255, 255, 255);
+                width: 45vh;
+                margin: 0 auto;
+                margin-top: 0;
+
         }
+        
         h2 {
             text-align: center;
             margin-bottom: 1.5rem;
