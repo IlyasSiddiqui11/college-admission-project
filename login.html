@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Student Sign Up & Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login&signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -52,3 +52,24 @@
         </div>
 
     </div>
+    <script>
+        const enrollment_number = document.getElementById("enrollment-number");
+        const password = document.getElementById("login-password");
+        const form = document.querySelector("form");
+
+        function openStudentDashboardPage() {
+            event.preventDefault()
+            window.location.href = "student-dashboard.html";
+        }
+
+        form.addEventListener("submit", function(event) {
+            if (password.value.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                event.preventDefault(); 
+            }
+            else{
+                openStudentDashboardPage();
+            }
+        });
+    </script>
+</body>

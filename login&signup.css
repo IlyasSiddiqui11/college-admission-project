@@ -11,7 +11,7 @@
             background-size: 100%;
             background-color: #EEF0F4;
             display: flex;
-            height: 9rem;
+            height: 8rem;
             width: 100vw;
             position: fixed;
             top: 0;
@@ -23,7 +23,7 @@
         }
         .college-header {
             margin-top: 2vh;
-            margin-left: 19vw;
+            margin-left: 14vw;
             height: 1.5;
             color: #000000;
             text-align: center;
@@ -57,7 +57,7 @@
 
 .capsule {
     display: block;
-    margin: 10rem auto 2rem auto; /* 10rem pushes below bar, 2rem gap above container */
+    margin: 9rem auto 1rem auto; /* 10rem pushes below bar AND 2rem gap above container */
     font-weight: 550;
     color: #1173D4;
     border: none;
