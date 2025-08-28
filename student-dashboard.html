@@ -1,13 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="student-dashboard.css">
+
 <body>
-    <div class="student-card">
-        
+
+    <div class="navbar">
+        Student Dashboard
     </div>
+
+    <div class="container">
+        <h2 id="welcome"></h2>
+
+        <h3>Apply for Admission</h3>
+        <form id="applicationForm">
+            <label for="course">Select Your Course</label>
+            <select id="course" required>
+                <option value="">-- Select Course --</option>
+                <option value="CSE(DS)">CSE(DS)</option>
+                <option value="CS-IT">CS-IT</option>
+                <option value="COMPS">COMPS</option>
+                <option value="AIML">AIML</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="MECH">MECH</option>
+            </select>
+
+            <label for="academic-year">Select Year</label>
+            <select id="year" required>
+                <option value="">-- Select Year --</option>
+                <option value="SE">SE</option>
+                <option value="TE">TE</option>
+                <option value="BE">BE</option>
+            </select>
+
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <div class="status" id="statusBox">
+            No application submitted yet.
+        </div>
+    </div>
+
+    <script>
+        // Show logged-in student name from localStorage
+        const loggedInUser = localStorage.getItem("loggedInUser");
+        document.getElementById("welcome").innerText = "Welcome, " + loggedInUser;
+
+        // to Handle admission form submission
+        const form = document.getElementById("applicationForm");
+        const statusBox = document.getElementById("statusBox");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const course = document.getElementById("course").value;
+            const year = document.getElementById("year").value;
+
+            if (course && year) {
+                statusBox.innerHTML = `Application submitted for <b>${course}</b>. Status: <span class="pending">Pending</span>`;
+                
+            }
+        });
+    </script>
 </body>
+
 </html>
